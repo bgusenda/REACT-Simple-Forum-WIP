@@ -1,0 +1,8 @@
+node_modules
+
+# Environment and secrets
+.env
+.env.*
+config.env
+server/src/config.env
+.env

@@ -1,0 +1,19 @@
+{
+  "name": "react-basic-forum",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "client": "cd client && pnpm run dev",
+    "server": "cd server && pnpm run dev",
+    "dev": "concurrently \"pnpm run server\" \"pnpm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "packageManager": "pnpm@10.32.1",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
