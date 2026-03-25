@@ -10,7 +10,7 @@ const { getDb } = require('../connect');
 usersRoutes.use((req, res, next) => {
     const db = getDb();
     if (!db) {
-        return res.status(503).json({ message: 'Database not connected yet' });
+        return res.status(503).json({ message: 'Database not connected.' });
     }
     next();
 });
@@ -255,7 +255,7 @@ usersRoutes.route('/:id').delete(async (_req: Request<{ id: string }>, res: Resp
 
         // Checks if user id is valid
         if (!ObjectId.isValid(id)) {
-            return res.status(400).json({ message: 'Invalid user id format. ' });
+            return res.status(400).json({ message: 'Invalid user id format.' });
         }
 
         const userId = new ObjectId(id);

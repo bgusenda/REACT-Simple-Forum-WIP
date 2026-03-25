@@ -3,6 +3,8 @@ import cors from 'cors';
 import path from 'path';
 
 const usersRoutes = require('./routes/usersRoutes');
+const postsRoutes = require('./routes/postsRoutes');
+const commentsRoutes = require('./routes/commentsRoutes');
 const { connectToServer } = require('./connect');
 
 require('dotenv').config({ path: path.resolve(__dirname, './config.env') });
@@ -12,6 +14,8 @@ const app: Express = express();
 app.use(cors());
 app.use(express.json());
 app.use('/users', usersRoutes);
+app.use('/posts', postsRoutes);
+app.use('/comments', commentsRoutes);
 app.use(express.urlencoded({ extended: true }));
 
 const uri = process.env.MONGODB_URI || 'mongodb://localhost:27017';
