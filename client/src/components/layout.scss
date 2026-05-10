@@ -1,0 +1,14 @@
+.layoutDiv {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
+
+    .userSide, .trendingPosts {
+        border: 1px solid cyan;
+        width: 20%;
+    }
+
+    .bodyContent {
+        padding: 20px 0px;
+    }
+}

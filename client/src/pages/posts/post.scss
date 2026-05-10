@@ -1,0 +1,116 @@
+.postPage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px 50px;
+    //    min-height: 1000px;
+}
+
+.postContainer {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+
+    .postHeader {
+        .div1 {
+            display: flex;
+            align-items: center;
+            height: 40px;
+            padding: 6px 12px;
+
+            .backButton {
+                background-color: transparent;
+                border: none;
+                color: white;
+                font-size: 16px;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: red;
+                }
+            }
+
+            span {
+                background-color: rgba(255, 255, 255, 0.6);
+                margin: 0px 10px;
+                height: 40px;
+                width: 3px;
+                border-radius: 10px;
+            }
+
+            .postTitle {
+                font-weight: 600;
+                font-size: 29px;
+            }
+        }
+
+        .div2 {
+            margin: 6px 0px;
+            padding: 12px 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0.6);
+            border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+
+            p {
+                margin-right: 28px;
+                opacity: .7;
+                font-style: italic;
+
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        div {
+            display: flex;
+        }
+    }
+
+    .postDescription {
+        display: flex;
+        align-items: center;
+        padding: 12px 38px;
+
+        text {
+            padding: 6px 20px;
+            border-left: 3px solid rgba(255, 255, 255, 0.6);
+            background-color: rgb(62, 62, 70);
+            border-radius: 5px;
+        }
+    }
+
+    .postContent {
+        padding: 0px 22px;
+
+        p {
+            margin: 10px 0px;
+        }
+
+        div {
+            padding: 12px 0px;
+            display: flex;
+
+            .postInfo {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 6px 0px;
+                border-radius: 14px;
+                min-width: 90px;
+                opacity: .8;
+                background-color: rgb(62, 62, 70);
+                color: white;
+                margin-right: 15px;
+                border: none;
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+.commentsContainer {
+    border-top: 2px solid white;
+    margin: 30px 0px;
+    padding: 20px 0px;
+}

@@ -116,7 +116,11 @@ postsRoutes.route('/:id').get(async (_req: Request<{ id: string }>, res: Respons
 
         const data = await db
             .collection('posts')
-            .findOne({ _id: new ObjectId(id) });
+            .findOneAndUpdate(
+                { _id: new ObjectId(id) },
+                { $inc: { views: 1 } },
+                { returnDocument: 'after' }
+            );
 
         if (!data) {
             return res.status(404).json({ message: 'Post not found.' });
@@ -217,6 +221,7 @@ postsRoutes.post('/', verifyToken, async (_req: AuthenticatedRequest<Record<stri
             lastEditDate: null,
             upvotes: 0,
             downvotes: 0,
+            views: 0,
             comments: [],
             edited: false,
             tags: normalizedTags
